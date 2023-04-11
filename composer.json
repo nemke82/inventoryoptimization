@@ -9,7 +9,7 @@
             "email": "ne@nemnaja.io"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "files": [
