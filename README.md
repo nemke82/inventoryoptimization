@@ -34,5 +34,8 @@ Module that optimize inventory_reservation table
  - apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush
 
-
+PHP Unti test available:
+```
+vendor/bin/phpunit -c dev/tests/unit/phpunit.xml.dist vendor/nemke82/inventoryoptimization/Test/Unit/Plugin/Model/GetReservationsQuantityPluginTest.php
+```
 
