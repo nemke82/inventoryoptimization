@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="inventory_reservation_aggregated" resource="default" engine="innodb" comment="Inventory Reservation Aggregated">
+        <column xsi:type="varchar" name="sku" nullable="false" length="64" comment="SKU"/>
+        <column xsi:type="int" name="stock_id" unsigned="true" nullable="false" identity="false" comment="Stock Id"/>
+        <column xsi:type="decimal" name="quantity" scale="4" precision="20" nullable="false" comment="Aggregated Quantity"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="sku"/>
+            <column name="stock_id"/>
+        </constraint>
+    </table>
+</schema>

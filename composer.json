@@ -1,0 +1,22 @@
+{
+    "name": "nemke82/inventoryoptimization",
+    "description": "Module that optimize inventory_reservation table",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nemanja Djuric",
+            "email": "ne@nemnaja.io"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Nemke82\\InventoryOptimization\\": ""
+        }
+    }
+}
