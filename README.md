@@ -10,7 +10,8 @@
 
 
 ## Main Functionalities
-Module that optimize inventory_reservation table
+Module that optimize inventory_reservation table by adding Materilized View and aggregated table. It also rewrite
+Magento\Inventory\Model\ResourceModel\GetReservationsQuantity Core functionality by calling view with agreggated data.
 
 ## Installation
 \* = in production please use the `--keep-generated` option
@@ -23,18 +24,12 @@ Module that optimize inventory_reservation table
  - Flush the cache by running `php bin/magento cache:flush`
 
 ### Type 2: Composer
-
- - Make the module available in a composer repository for example:
-    - private repository `repo.magento.com`
-    - public repository `packagist.org`
-    - public github repository as vcs
- - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
  - Install the module composer by running `composer require nemke82/module-inventoryoptimization`
  - enable the module by running `php bin/magento module:enable Nemke82_InventoryOptimization`
  - apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush
 
-PHP Unti test available:
+PHP Unit test available with the following command:
 ```
 vendor/bin/phpunit -c dev/tests/unit/phpunit.xml.dist vendor/nemke82/inventoryoptimization/Test/Unit/Plugin/Model/GetReservationsQuantityPluginTest.php
 ```
